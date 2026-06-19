@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import type { FormEvent } from 'react';
 import { 
   Github, 
   Linkedin, 
@@ -268,7 +269,7 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    let intervalId;
+    let intervalId: any;
     if (isTrainingXOR) {
       intervalId = setInterval(() => {
         setXorEpoch(prev => {
@@ -309,18 +310,18 @@ export default function App() {
     setXorBias(Number((Math.random() - 0.5).toFixed(2)));
   };
 
-  const handleVehicleChange = (type) => {
+  const handleVehicleChange = (type: string) => {
     setSelectedVehicleType(type);
     calculateFuzzyLogic(type, scannedRoadWidth);
   };
 
-  const handleRoadWidthChange = (val) => {
+  const handleRoadWidthChange = (val: string) => {
     const width = parseFloat(val);
     setScannedRoadWidth(width);
     calculateFuzzyLogic(selectedVehicleType, width);
   };
 
-  const calculateFuzzyLogic = (vehicle, width) => {
+  const calculateFuzzyLogic = (vehicle: string, width: number) => {
     let maxVehicleWidth = 1.6; 
     if (vehicle === 'suv') maxVehicleWidth = 2.0;
     if (vehicle === 'truck') maxVehicleWidth = 2.8;
@@ -350,7 +351,7 @@ export default function App() {
     }
   };
 
-  const handleChatSubmit = (e) => {
+  const handleChatSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (!chatInput.trim()) return;
 
@@ -384,7 +385,7 @@ export default function App() {
     }, 600);
   };
 
-  const sendQuickPrompt = (prompt) => {
+  const sendQuickPrompt = (prompt: string) => {
     setChatMessages(prev => [...prev, { sender: 'user', text: prompt }]);
     setTimeout(() => {
       let reply = "";
@@ -906,7 +907,7 @@ export default function App() {
                     />
                   </div>
 
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-[9px]">
+                  <div className="grid grid-cols-2 sm:grid-cols-5 gap-2 text-[9px]">
                     <div className="bg-[#0b0b20] border border-[#1c1a3b] p-2 rounded">
                       <span className="block text-[8px] text-slate-500">W1_1 (H1)</span>
                       <span className="text-slate-300 font-bold">{(xorW11).toFixed(3)}</span>
@@ -922,6 +923,10 @@ export default function App() {
                     <div className="bg-[#0b0b20] border border-[#1c1a3b] p-2 rounded">
                       <span className="block text-[8px] text-slate-500">W2_2 (H2)</span>
                       <span className="text-slate-300 font-bold">{(xorW22).toFixed(3)}</span>
+                    </div>
+                    <div className="bg-[#0b0b20] border border-[#1c1a3b] p-2 rounded">
+                      <span className="block text-[8px] text-slate-500">Bias</span>
+                      <span className="text-slate-300 font-bold">{(xorBias).toFixed(3)}</span>
                     </div>
                   </div>
 
