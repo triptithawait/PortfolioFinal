@@ -34,7 +34,7 @@ const RESUME_DATA = {
   phone: "+91 9009885425",
   location: "Raigarh, C.G., India",
   links: {
-    linkedin: "https://www.linkedin.com/in/tripti-thawait-7201b1285", 
+    linkedin: "https://www.linkedin.com/in/tripti-thawait", 
     github: "https://github.com/triptithawait"
   },
   education: [
