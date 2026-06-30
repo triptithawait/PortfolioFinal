@@ -44,7 +44,7 @@ const RESUME_DATA = {
       inst: "Amity University Chhattisgarh",
       period: "2023 - 2027",
       scoreType: "CGPA",
-      score: "8.99"
+      score: "8.96/10.00"
     },
     {
       degree: "Senior Secondary (12th)",
