@@ -29,7 +29,7 @@ const RESUME_DATA = {
   name: "Tripti Thawait",
   tagline: "AI/ML Enthusiast & Full-Stack Developer",
   subtagline: "Specializing in precision AI systems, multimodal frameworks, and data-driven solutions.",
-  cgpa: "8.99",
+  cgpa: "8.96",
   email: "triptithawait20@gmail.com",
   phone: "+91 9009885425",
   location: "Raigarh, C.G., India",
@@ -189,7 +189,7 @@ const RESUME_DATA = {
   achievements: [
     "Ranked 3rd out of 70 teams - Internal Smart India Hackathon 2024, organized by the Ministry of Education, Government of India.",
     "Successfully published 2 first-author research papers and 1 comprehensive review paper before B.Tech graduation.",
-    "Maintained an exceptional academic standing with a CGPA of 8.99/10.00 throughout engineering course."
+    "Maintained an exceptional academic standing with a CGPA of 8.96/10.00 throughout engineering course."
   ],
   certifications: [
     {
